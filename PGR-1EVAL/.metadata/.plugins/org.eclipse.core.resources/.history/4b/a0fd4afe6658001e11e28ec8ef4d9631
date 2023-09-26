@@ -1,0 +1,22 @@
+package main;
+
+import java.util.Scanner;
+
+public class Ej9 {
+
+	public static void main(String[] args) {
+		Scanner sc=new Scanner(System.in);
+		
+		int sueldoPer;
+		String estadoCivil;
+		
+		System.out.println("Introduce el sueldo del trabajador");
+		sueldoPer=sc.nextInt();
+		System.out.println("Introduce el estado civil");
+		
+		if(sueldoPer<=1000) {
+			
+		}
+	}
+
+}

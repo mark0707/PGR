@@ -1,0 +1,44 @@
+package main;
+
+import java.util.Scanner;
+
+public class Ej9 {
+
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+
+		String nombre;
+		int numHijos;
+		float sueldoPer;
+		String estadoCivil;
+
+		System.out.println("Introduce el sueldo del trabajador");
+		sueldoPer = sc.nextFloat();
+		System.out.println("Introduce el estado civil. soltero/casado/viudo/otro");
+		estadoCivil = sc.next();
+
+		if (estadoCivil.equalsIgnoreCase("soltero")) {
+			sueldoPer = sueldoPer * 0.13f;
+		} else if (estadoCivil.equalsIgnoreCase("casado")) {
+			sueldoPer = sueldoPer * 0.08f;
+		} else if (estadoCivil.equalsIgnoreCase("viudo")) {
+			sueldoPer = sueldoPer * 0.1f;
+		} else if (estadoCivil.equalsIgnoreCase("otro")) {
+			sueldoPer = sueldoPer * 0.11f;
+		}
+
+		if (sueldoPer <= 1000) {
+			System.out.println("Introduce el numero de hijos");
+			numHijos = sc.nextInt();
+			if (numHijos >= 1) {
+				System.out.println("Beca concedida");
+			} else {
+				System.out.println("No se te ha concedido la beca");
+			}
+		} else {
+			System.out.println("No se te ha concedido la beca");
+		}
+
+	}
+
+}

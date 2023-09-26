@@ -1,0 +1,26 @@
+package main;
+
+import java.util.Scanner;
+
+public class Ej29 {
+
+	public static void main(String[] args) {
+		Scanner sc=new Scanner(System.in);
+		
+		int i=0;
+		int u;
+		do {
+			System.out.println("introduzca 10 numeros");
+			u=sc.nextInt();
+			if(u==0) {
+				i=i+10;
+			}
+			
+			
+			
+			
+		}while(i++<10);
+		
+	}
+
+}

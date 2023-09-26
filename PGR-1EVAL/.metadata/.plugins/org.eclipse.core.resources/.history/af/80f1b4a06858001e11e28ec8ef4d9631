@@ -1,0 +1,35 @@
+package main;
+
+import java.util.Scanner;
+
+public class Ej9 {
+
+	public static void main(String[] args) {
+		Scanner sc=new Scanner(System.in);
+		
+		float sueldoPer;
+		String estadoCivil;
+		
+		System.out.println("Introduce el sueldo del trabajador");
+		sueldoPer=sc.nextFloat();
+		System.out.println("Introduce el estado civil. soltero/casado/viudo/otro");
+		estadoCivil=sc.next();
+		
+		if(estadoCivil.equalsIgnoreCase("soltero")) {
+			sueldoPer=sueldoPer*0.13f;
+		}else if(estadoCivil.equalsIgnoreCase("casado")){
+			sueldoPer=sueldoPer*0.08f;
+		}else if(estadoCivil.equalsIgnoreCase("viudo")) {
+			sueldoPer=sueldoPer*0.8f;
+		}else if(estadoCivil.equalsIgnoreCase("otro")) {
+			sueldoPer=sueldoPer*0.8f;
+		}
+		
+		
+		
+		if(sueldoPer<=1000) {
+			
+		}
+	}
+
+}

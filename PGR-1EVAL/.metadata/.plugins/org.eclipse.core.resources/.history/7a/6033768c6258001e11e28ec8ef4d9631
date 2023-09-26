@@ -1,0 +1,22 @@
+package main;
+
+import java.util.Scanner;
+
+public class Ej2 {
+
+	public static void main(String[] args) {
+		
+		Scanner sc=new Scanner(System.in);
+		
+		int num1;
+		int num2;
+		
+		
+		System.out.println("Introduce dos numeros para decirte cual es mayor");
+		num1=sc.nextInt();
+		num2=sc.nextInt();
+		
+
+	}
+
+}
