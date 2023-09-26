@@ -1,0 +1,30 @@
+package principal;
+
+import java.util.Scanner;
+
+public class Principal {
+
+	public static void main(String[] args) {
+	
+		// Esta sentencia muestra en pantalla un mensaje de hola mundo
+		
+		System.out.println("hola\nmundo");
+		
+		Scanner sc =new Scanner(System.in);
+		
+		int numeroU;
+		int numeroR;
+		int n;
+		
+		System.out.println("Introduce un numero");
+		numeroU=sc.nextInt();
+		
+		 do{
+			numeroR=numeroU-1;
+			n=n+numeroR;
+			System.out.println(n);
+		}while(numeroR>0);
+
+	}
+
+}

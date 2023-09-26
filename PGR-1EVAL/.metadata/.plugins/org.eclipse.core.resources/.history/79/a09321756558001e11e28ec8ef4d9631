@@ -1,0 +1,23 @@
+package main;
+
+import java.util.Scanner;
+
+public class Ej5 {
+
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+
+		int numMax;
+		int notaAlumno;
+		char letra;
+		boolean trabajos;
+		System.out.println("Introduce la nota maxima del examen");
+		numMax = sc.nextInt();
+		System.out.println("Introduce la nota del alumno");
+		notaAlumno = sc.nextInt();
+		System.out.println("¿Ha entregado los trabajos? s/n");
+		letra=sc.next().charAt(letra);
+		if()
+	}
+
+}
