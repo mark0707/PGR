@@ -7,7 +7,7 @@ public class Ej20 {
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
 
-		int i = 0;
+		
 		int n;
 		int suma = 0;
 		System.out.println("Introduce un numero");

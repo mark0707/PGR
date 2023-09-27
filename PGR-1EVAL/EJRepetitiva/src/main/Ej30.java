@@ -11,17 +11,21 @@ public class Ej30 {
 		int i = 0;
 		int u;
 		int suma = 0;
+		float media;
 		do {
 			System.out.println("introduzca 10 numeros");
 			u = sc.nextInt();
-			if (u < 0) {
+			if (u >= 0) {
 				u=0;
-			}
-			suma = suma + u;
+				suma = suma + u;
 
 			i++;
+			}
+			
 		} while (i < 10);
 		System.out.println(suma);
+		media=suma/10;
+		System.out.println(media);
 		sc.close();
 	}
 
