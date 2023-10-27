@@ -14,7 +14,6 @@ public class ArrayEj13 {
 		int suma = 0;
 		int opc = 0;
 		int repetidos = 0;
-		
 
 		for (int i = 0; i < arrayAlum.length; i++) {
 			System.out.println("Introduce el nombre de un alumno");
@@ -33,6 +32,7 @@ public class ArrayEj13 {
 			System.out.println("4. Mostrar cantidad de notas repetidas");
 			System.out.println("5. Mostrar la nota de un alumno especifico");
 			System.out.println("6. Cambiar la nota de un alumno");
+			System.out.println("7. Ordenar las notas de mayor a menor");
 
 			opc = sc.nextInt();
 			switch (opc) {
@@ -55,7 +55,7 @@ public class ArrayEj13 {
 					cambiarNota(sc, arrayAlum, nombreAlum, arraynota);
 					break;
 				case 7:
-
+					ordenarMayorMenor(arrayAlum, arraynota);
 					break;
 				case 8:
 					System.out.println("Saliste");
@@ -68,6 +68,28 @@ public class ArrayEj13 {
 		sc.close();
 	}
 
+	private static void ordenarMayorMenor(String[] arrayAlum, int[] arraynota) {
+		boolean intercambiado;
+		do {
+			intercambiado = false;
+			for (int i = 1; i < arraynota.length; i++) {
+				if (arraynota[i - 1] < arraynota[i]) {
+					// Hago el intercambio de notas
+					int nota = arraynota[i - 1];
+					arraynota[i - 1] = arraynota[i];
+					arraynota[i] = nota;
+
+					// Hago el intercambio de nombres
+					String nombre = arrayAlum[i - 1];
+					arrayAlum[i - 1] = arrayAlum[i];
+					arrayAlum[i] = nombre;
+
+					intercambiado = true;
+				}
+			}
+		} while (intercambiado);
+	}
+
 	private static void cambiarNota(Scanner sc, String[] arrayAlum, String nombreAlum, int[] arraynota) {
 		for (int i = 0; i < arrayAlum.length; i++) {
 			System.out.println(arrayAlum[i]);
@@ -75,13 +97,13 @@ public class ArrayEj13 {
 		System.out.println("De que persona quieres cambiar la nota");
 		nombreAlum = sc.next();
 		for (int i = 0; i < arrayAlum.length; i++) {
-			if (nombreAlum .equalsIgnoreCase(arrayAlum[i])) {
+			if (nombreAlum.equalsIgnoreCase(arrayAlum[i])) {
 				System.out.println("Que nota quieres poner a " + nombreAlum);
 				arraynota[i] = sc.nextInt();
 			}
 		}
 		System.out.println("Nota cambiada con exito");
-	
+
 	}
 
 	private static void notaAlumno(Scanner sc, String[] arrayAlum, String nombreAlum, int[] arraynota) {
@@ -98,7 +120,6 @@ public class ArrayEj13 {
 			}
 		} while (!encontrado);
 
-	
 	}
 
 	private static void repeticionNum(String[] arrayAlum, Scanner sc, int[] arraynota, int repetidos) {
@@ -131,11 +152,11 @@ public class ArrayEj13 {
 				nombreAlum = arrayAlum[i];
 			}
 		}
-		System.out.println("El alumno con mas nota es: " + nombreAlum+"su nota es un "+notaMax);
+		System.out.println("El alumno con mas nota es: " + nombreAlum + "su nota es un " + notaMax);
 		// convertimos el nombre del alumno a null ya que el la opcion 5, 6 usamos esta
 		// variable y puede coincidir con el 1. nombre del array sin haberle preguntado
 		// al usuario
-		
+
 	}
 
 	private static void visualizarTodo(String[] arrayAlum, int[] arraynota) {
